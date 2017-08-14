@@ -1,0 +1,2 @@
+class MusicianRequest < ApplicationRecord
+end

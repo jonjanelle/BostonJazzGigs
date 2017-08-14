@@ -1,0 +1,39 @@
+<h2>Thanks for your band inquiry!</h2>
+<div>We are currently reviewing your request and will contact you soon to discuss band options.</div>
+<br>
+<h3>Request Summary:</h3>
+<div style="line-height:20px;padding-left:15px;">
+  <strong>Name:</strong>  <%= @request.full_name %>
+  <br>
+  <strong>Email:</strong>  <%= @request.email %>
+  <br>
+  <% if @request.phone %>
+    <strong>Phone:</strong>  <%= @request.phone %>
+    <br>
+  <% end %>
+  <strong>Date:</strong>  <%= @request.date_and_time %>
+  <br>
+  <strong>Location:</strong>  <%= @request.full_address %>
+  <br>
+  <% if @request.hours %>
+    <strong>Duration (hours):</strong>  <%= @request.hours %>
+    <br>
+  <% end %>
+  <% if @request.bandsize %>
+    <strong>Desired Band Size:</strong>  <%= @request.bandsize %>
+    <br>
+  <% end %>
+  <% if @request.instrument_wanted %>
+    <strong>Desired Instrumentation:</strong>  <%= @request.instrument_wanted %>
+    <br>
+  <% end %>
+  <% if @request.description %>
+    <strong>Additional Info:</strong>  <%= @request.description %>
+  <% end %>
+</div>
+<p>If any of this information is inaccurate or incomplete, please contact us at bostonjazzgigs@gmail.com</p>
+<br><br>
+Best Regards,
+<br>
+The Boston Jazz Gigs Team
+<br><br>

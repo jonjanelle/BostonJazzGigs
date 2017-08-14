@@ -1,0 +1,119 @@
+<div class="headline-bg">
+
+  <!-- ******Contact Section****** -->
+  <section class="contact-section section section-on-bg">
+    <div class="container-fluid">
+
+      <%= form_for @band_request, html: {class: "contact-form"} do |f| %>
+      <div class="row">
+        <div class="col-md-offset-2 col-sm-offset-0 xs-offset-0 col-xs-12 col-md-8">
+          <div class="light-hover-shadow request-form-wrapper">
+            <div class="orange-backdrop contact-form-header">
+              <h2 class="title text-center">Make a Band Request</h2>
+            </div>
+            <div class="contact-form-inner">
+              <div class="text-center text-medium">Tell us about your entertainment needs and we'll get get back to you with band options soon!</div>
+              <br>
+              <small>* indicates a required field</small>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="field form-group">
+                    <%= f.label :first, "First Name" %>
+                    <%= f.text_field :first, placeholder: "Enter first name", class: "form-control", required: true%>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="field form-group">
+                    <%= f.label :last, "Last Name" %>
+                    <%= f.text_field :last, placeholder: "Enter last name", class: "form-control", required: true%>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="field form-group">
+                    <%= f.label :email, "E-mail Address" %>
+                    <%= f.email_field :email, placeholder: "Enter e-mail address", class: "form-control", required: true%>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="field form-group">
+                    <%= f.label :phone, "Phone Number" %>
+                    <%= f.text_field :phone, placeholder: "Enter telephone number", class: "form-control", required: true%>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="field form-group">
+                    <%= f.label :date, "Event Date" %>
+                    <%= f.text_field :date, placeholder: "Enter event date", class: "form-control" %>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="field form-group">
+                    <%= f.label :time, "Event Time" %>
+                    <%= f.text_field :time, placeholder: "Enter event time", class: "form-control"%>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="field form-group">
+                    <%= f.label :hours, "Event Length (hours)" %>
+                    <%= f.text_field :hours, placeholder: "Enter event duration in hours", class: "form-control"%>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="field form-group">
+                    <%= f.label :bandsize, "Target Band Size" %>
+                    <%= f.number_field :bandsize, placeholder: "How large a band do you want (in people)?", class: "form-control"%>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="field form-group">
+                    <%= f.label :instrument_wanted, "Instruments Desired" %>
+                    <%= f.text_field :instrument_wanted, placeholder: "Guitar, piano, banjo, vocals, etc...", class: "form-control"%>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="field form-group">
+                    <%= f.label :address, "Street Address" %>
+                    <%= f.text_field :address, placeholder: "Enter event street", class: "form-control"%>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="field form-group">
+                    <%= f.label :city, "City" %>
+                    <%= f.text_field :city, placeholder: "Enter event city", class: "form-control"%>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="field form-group">
+                    <%= f.label :state, "State" %>
+                    <%= f.text_field :state, placeholder: "Enter event state", class: "form-control"%>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="field form-group">
+                    <%= f.label :description, "Additional Info" %>
+                    <%= f.text_area :description, cols:"32", rows:"6", placeholder: "Any other info that could help us understand your event and band preferences?", class: "form-control", required: true%>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <%= f.submit "Send Band Request", class: "btn btn-block btn-primary"%>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+
+        <!--//contact-form-->
+      </div>
+      <!--//container-->
+    </section>
+    <!--//contact-section-->
+  </div>
+
+
+  <script>
+  $( function() {
+   $("#band_request_date").datepicker();
+   $("#band_request_time").timepicker();
+  });
+ </script>

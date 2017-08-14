@@ -1,0 +1,114 @@
+<div class="headline-bg">
+
+  <!-- ******Contact Section****** -->
+  <section class="contact-section section section-on-bg">
+    <div class="container-fluid">
+
+      <%= form_for @musician_request, html: {class: "contact-form"} do |f| %>
+      <div class="row">
+        <div class="col-md-offset-2 col-sm-offset-0 xs-offset-0 col-xs-12 col-md-8">
+          <div class="light-hover-shadow request-form-wrapper">
+            <div class="orange-backdrop contact-form-header">
+              <h2 class="title text-center">Request to Join Musician Network</h2>
+            </div>
+            <div class="contact-form-inner">
+              <div class="text-center text-medium">Tell us about your musical skills and experiences so that we can see if you'd be a good fit for our clients.</div>
+              <br>
+              <small>* indicates a required field</small>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="field form-group">
+                    <%= f.label :first, "First Name" %>
+                    <%= f.text_field :first, placeholder: "Enter first name", class: "form-control", required: true %>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="field form-group">
+                    <%= f.label :last, "Last Name" %>
+                    <%= f.text_field :last, placeholder: "Enter last name", class: "form-control", required: true %>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="field form-group">
+                    <%= f.label :email, "E-mail Address" %>
+                    <%= f.email_field :email, placeholder: "Enter e-mail address", class: "form-control", required: true %>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="field form-group">
+                    <%= f.label :phone, "Phone Number" %>
+                    <%= f.text_field :phone, placeholder: "Enter telephone number", class: "form-control", required: true %>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="field form-group">
+                    <%= f.label :address, "Street Address" %>
+                    <%= f.text_field :address, placeholder: "Enter event street", class: "form-control" %>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="field form-group">
+                    <%= f.label :city, "City" %>
+                    <%= f.text_field :city, placeholder: "Enter event city", class: "form-control" %>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="field form-group">
+                    <%= f.label :state, "State" %>
+                    <%= f.text_field :state, placeholder: "Enter event state", class: "form-control" %>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="field form-group">
+                    <%= f.label :primary_instrument, "Primary Instrument" %>
+                    <%= f.text_field :primary_instrument, placeholder: "What is your primary instrument?", class: "form-control" %>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="field form-group">
+                    <%= f.label :secondary_instrument, "Secondary Instrument" %>
+                    <%= f.text_field :secondary_instrument, placeholder: "What is your secondary instrument?", class: "form-control" %>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="field form-group">
+                    <%= f.label :experience, "Experience" %>
+                    <%= f.text_area :experience, cols:"32", rows:"4", placeholder: "Briefly describe your experience givings live jazz performances.", class: "form-control", required: true %>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="field form-group">
+                    <%= f.label :availability, "Availability" %>
+                    <%= f.text_area :availability, cols:"32", rows:"4", placeholder: "During a typical week, when are you available?", class: "form-control", required: true %>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="field form-group">
+                    <%= f.label :additional_info, "Additional Info" %>
+                    <%= f.text_area :additional_info, cols:"32", rows:"4", placeholder: "Feel free to share anything else that might help us to get to know you as a musician and performer.", class: "form-control", required: true %>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <%= f.submit "Send Band Request", class: "btn btn-block btn-primary" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+
+        <!--//contact-form-->
+      </div>
+      <!--//container-->
+    </section>
+    <!--//contact-section-->
+  </div>
+
+
+  <script>
+  $( function() {
+   $("#band_request_date").datepicker();
+   $("#band_request_time").timepicker();
+  });
+ </script>

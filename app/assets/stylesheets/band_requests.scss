@@ -1,0 +1,81 @@
+// Place all the styles related to the BandRequests controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/* ======= Contact section ======= */
+
+.contact-section {
+  position: relative;
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+  }
+  .intro {
+    color: #FFFFFF;
+    font-size: 18px;
+  }
+  .contact-form {
+    margin-left: 15px;
+    margin-right: 15px;
+    .contact-form-header {
+      margin: 0 auto;
+      border-radius: 8px 8px 0 0;
+      padding: 30px 0px 15px 0px;
+    }
+    .contact-form-inner {
+      background: #fff;
+      padding: 30px;
+      -webkit-border-radius: 0 0 8px 8px;
+      -moz-border-radius: 0 0 8px 8px;
+      -ms-border-radius: 0 0 8px 8px;
+      -o-border-radius: 0 0 8px 8px;
+      border-radius:0 0 8px 8px;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+      border: 1px solid #eee;
+      -webkit-box-shadow: 0 4px 1px rgba(0, 0, 0, 0.35);
+      -moz-box-shadow: 0 4px 1px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 4px 1px rgba(0, 0, 0, 0.35);
+    }
+    .error {
+      color: #ec6952;
+      font-family: arial, sans-serif;
+      display: block;
+      font-size: 14px;
+      text-align: left;
+      padding-top: 5px;
+      padding-left: 5px;
+      font-weight: 300;
+    }
+  }
+}
+
+.headline-bg {
+  background-image: image-url('contactbg.jpeg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.orange-backdrop {
+  padding: 25px 10px 5px 10px;
+  margin: 0 auto;
+  line-height: 100%;
+  vertical-align: middle;
+  margin-bottom: 30px;
+  width: 100%;
+  background-color: rgba(236,105,82,.95);
+
+}
+
+.request-form-wrapper {
+  -webkit-border-radius: 8px 8px 8px 8px;
+  -moz-border-radius: 8px 8px 8px 8px;
+  -ms-border-radius: 8px 8px 8px 8px;
+  -o-border-radius: 8px 8px 8px 8px;
+  border-radius: 8px 8px 8px 8px;
+}
