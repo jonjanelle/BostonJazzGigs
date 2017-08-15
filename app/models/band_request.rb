@@ -4,8 +4,7 @@ class BandRequest < ApplicationRecord
   validates :last, presence: true, length: {maximum: 50}
   validates :email, presence: true, length: {maximum: 100},
             format: { with: VALID_EMAIL_REGEX }
-#  validates :phone, presence: true, length: {maximum: 20}
-#  validates_presence_of :date, :city, :state, :hours
+  validates_presence_of :date, :city, :state, :hours, :description
 
   def full_name
     "#{first} #{last}".titleize
@@ -20,7 +19,7 @@ class BandRequest < ApplicationRecord
   end
 
   def full_address
-    if address
+    if address.present?
       return "#{address}, #{city}, #{state}"
     else
       return "#{city}, #{state}"

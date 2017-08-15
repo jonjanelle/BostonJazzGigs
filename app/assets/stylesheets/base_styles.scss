@@ -19,6 +19,58 @@
 .text-color-darker  { color: #555555 !important; }
 .text-color-darkest { color: #333333 !important; }
 .text-color-black   { color: #000000 !important; }
+.text-color-blue    { color: #3333aa !important; }
+.text-color-reqd    { color: #aa2222 !important; }
+
+/*************************
+Padding and margin styles
+*************************/
+@for $i from 1 through 50 {
+  .margin-bottom-#{$i}pct { margin-bottom: percentage($i/100) !important; }
+  .margin-top-#{$i}pct { margin-top: percentage($i/100) !important; }
+  .margin-left-#{$i}pct { margin-left: percentage($i/100) !important; }
+  .margin-right-#{$i}pct { margin-right: percentage($i/100)percentage($i/100) !important; }
+  .margin-#{$i}-pct { margin:  percentage($i/100) !important; }
+
+  .padding-bottom-#{$i}pct { padding-bottom: percentage($i/100) !important; }
+  .padding-top-#{$i}pct { padding-top: percentage($i/100) !important; }
+  .padding-left-#{$i}pct { padding-left: percentage($i/100) !important; }
+  .padding-right-#{$i}pct { padding-right: percentage($i/100) !important; }
+  .padding-#{$i}pct { padding: percentage($i/100) !important; }
+}
+
+@for $i from 0 through 20 {
+  $value: $i*10;
+  .margin-bottom-#{$value}px { margin-bottom: #{$value}px !important; }
+  .margin-top-#{$value}px { margin-top: #{$value}px !important; }
+  .margin-left-#{$value}px { margin-left: #{$value}px !important; }
+  .margin-right-#{$value}px { margin-right: #{$value}px !important; }
+  .margin-#{$value}px  { margin: #{$value}px !important; }
+
+  .padding-bottom-#{$value}px { padding-bottom: #{$value}px !important; }
+  .padding-top-#{$value}px { padding-top: #{$value}px !important; }
+  .padding-left-#{$value}px { padding-left: #{$value}px !important; }
+  .padding-right-#{$value}px { padding-right: #{$value}px !important; }
+  .padding-#{$value}px { padding: #{$value}px !important; }
+}
+
+@for $i from 1 through 8 {
+  .margin-bottom-#{$i}rem { margin-bottom: #{$i}rem !important; }
+  .margin-top-#{$i}rem { margin-top: #{$i}rem !important; }
+  .margin-left-#{$i}rem { margin-left: #{$i}rem !important; }
+  .margin-right-#{$i}rem { margin-right: #{$i}rem !important; }
+  .margin-#{$i}rem { margin: #{$i}rem !important; }
+
+  .padding-bottom-#{$i}rem { padding-bottom: #{$i}rem !important; }
+  .padding-top-#{$i}rem { padding-top: #{$i}rem !important; }
+  .padding-left-#{$i}rem { padding-left: #{$i}rem !important; }
+  .padding-right-#{$i}rem { padding-right: #{$i}rem !important; }
+  .padding-#{$i}rem { padding-right: #{$i}rem !important; }
+}
+
+.margin-0 { margin: 0px; }
+.margin-0-auto { margin: 0 auto; }
+.padding-0 { padding: 0; }
 
 
 .light-hover-shadow {

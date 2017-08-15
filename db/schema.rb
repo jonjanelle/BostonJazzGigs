@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20170812192033) do
     t.string "first", limit: 50, null: false
     t.string "last", limit: 50, null: false
     t.string "email", limit: 100, null: false
-    t.string "phone", limit: 20, null: false
+    t.string "phone", limit: 20
     t.string "preferred_contact"
     t.string "date", null: false
     t.string "time"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20170812192033) do
     t.decimal "hours"
     t.integer "bandsize"
     t.string "instrument_wanted"
-    t.text "description"
+    t.text "description", null: false
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20170812192033) do
     t.string "first", limit: 50, null: false
     t.string "last", limit: 50, null: false
     t.string "email", limit: 100, null: false
-    t.string "phone", limit: 20, null: false
+    t.string "phone", limit: 20
     t.string "preferred_contact"
     t.string "address"
     t.string "city", null: false
@@ -53,8 +53,8 @@ ActiveRecord::Schema.define(version: 20170812192033) do
     t.integer "travel_radius"
     t.string "primary_instrument", null: false
     t.string "secondary_instrument"
-    t.text "experience"
-    t.text "availability"
+    t.text "experience", null: false
+    t.text "availability", null: false
     t.text "additional_info"
     t.string "status"
     t.datetime "created_at", null: false

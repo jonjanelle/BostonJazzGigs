@@ -1,0 +1,39 @@
+<h2>Thanks for your your interest in joining the Boston Jazz Gigs musician network!</h2>
+<div>We are currently reviewing your request and will contact you soon if you're a good fit for our clients.</div>
+<br>
+<h3>Request Summary:</h3>
+<div style="line-height:20px; padding-left:15px;">
+  <strong>Name:</strong>  <%= @request.full_name %>
+  <br>
+  <strong>Email:</strong>  <%= @request.email %>
+  <br>
+  <% if @request.phone %>
+    <strong>Phone:</strong>  <%= @request.phone %>
+    <br>
+  <% end %>
+  <strong>Primary Instrument:</strong>  <%= @request.primary_instrument %>
+  <br>
+  <% if @request.secondary_instrument %>
+    <strong>Secondary Instrument:</strong>  <%= @request.secondary_instrument %>
+    <br>
+  <% end %>
+  <strong>Location:</strong>  <%= @request.full_address %>
+  <% if @request.travel_radius %>
+    <strong>Travel Radius:</strong>  <%= @request.travel_radius %> miles
+    <br>
+  <% end %>
+  <strong>Experience:</strong>  <%= @request.experience %>
+  <br>
+  <strong>Availability:</strong>  <%= @request.availability %>
+  <br>
+  <% if @request.additional_info %>
+    <strong>Additional Info:</strong>  <%= @request.additional_info %>
+    <br>
+  <% end %>
+</div>
+<p>If any of this information is inaccurate or incomplete, please contact us at bostonjazzgigs@gmail.com</p>
+<br><br>
+Best Regards,
+<br>
+The Boston Jazz Gigs Team
+<br><br>

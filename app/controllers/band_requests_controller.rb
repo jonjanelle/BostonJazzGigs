@@ -25,6 +25,4 @@ class BandRequestsController < ApplicationController
                                         :date, :time, :address, :city, :state, :hours, :bandsize,
                                         :instrument_wanted, :description, :status)
   end
-
-
 end

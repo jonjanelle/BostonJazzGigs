@@ -4,7 +4,7 @@ class CreateBandRequests < ActiveRecord::Migration[5.1]
       t.string :first, :null=>false, :limit => 50
       t.string :last, :null=>false, :limit => 50
       t.string :email, :null=>false, :limit => 100
-      t.string :phone, :null=>false, :limit => 20
+      t.string :phone, :limit => 20
       t.string :preferred_contact #email or phone
       t.string :date, :null=>false
       t.string :time
@@ -14,7 +14,7 @@ class CreateBandRequests < ActiveRecord::Migration[5.1]
       t.decimal :hours
       t.integer :bandsize
       t.string :instrument_wanted
-      t.text :description
+      t.text :description, :null => false
       t.string :status
       t.timestamps
     end

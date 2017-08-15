@@ -21,11 +21,9 @@ class MusicianRequestsController < ApplicationController
   private
   # Never trust parameters from the scary internet, only allow the white list through.
   def musician_request_params
-    params.require(:band_request).permit(:first, :last, :email, :phone, :preferred_contact,
-                                         :address, :city, :state, :primary_instrument,
-                                         :secondary_instrument, :experience, :availability,
-                                         :additional_info, :status)
+    params.require(:musician_request).permit(:first, :last, :email, :phone, :address,
+                                             :city, :state, :primary_instrument, :preferred_contact,
+                                             :secondary_instrument, :experience, :availability,
+                                             :travel_radius, :additional_info, :status)
   end
-
-
 end
