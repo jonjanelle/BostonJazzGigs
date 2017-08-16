@@ -10,12 +10,12 @@
     </div>
   </div>
 </header>
-
+<%= render partial: 'static_pages/info_modal' %>
 <aside class="bg-primary" id="about">
   <div class="container text-center">
-    <div class="call-to-action">
-      <br>
-      <h2>Our mission is to make it easy to connect top local jazz artists and event planners!</h2>
+    <div class="call-to-action padding-top-1rem">
+      <h2 class="text-color-white"><a data-toggle="modal" data-target="#myModal" title="Find out more!">Our mission is to make it easy to connect top local jazz artists and event planners!</a></h2>
+      <button class="btn btn-primary margin-top-2rem bg-blue" data-toggle="modal" data-target="#myModal" title="Find out more!">Click here to learn more</button>
     </div>
   </div>
 </aside>
@@ -67,7 +67,7 @@
   <div class="container text-center">
     <div class="call-to-action">
       <br>
-      <h2 class="title text-center">What are people saying about BostonJazzGigs?</h2>
+      <h2 class="title text-center">Don't take our word for it!</h2>
     </div>
   </div>
 </aside>
@@ -107,7 +107,7 @@
             <blockquote>
               <i class="fa fa-quote-left"></i>
               <p>
-                Everyone knows that pitas and jazz go together like oats and sausage!
+                Boston Jazz Gigs saved my third marriage - unbelievable service with style!
                 <br>
                 &nbsp
               </p>
@@ -159,39 +159,41 @@
         <p>Send us a message with any questions, concerns, or comments and we'll get back to you as soon as possible!</p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <%= form_for @request, html: {id: "contactForm", name: "sentMessage"} do |f| %>
-          <div class="row control-group">
-            <div class="form-group col-12 floating-label-form-group controls">
-              <%= f.label :name %>
-              <%= f.text_field :name, placeholder: "Name", class: "form-control", required: true%>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <%= form_for @request, html: {id: "contactForm", name: "sentMessage"} do |f| %>
+            <div class="row control-group">
+              <div class="form-group col-12 floating-label-form-group controls">
+                <%= f.label :name %>
+                <%= f.text_field :name, placeholder: "Name", class: "form-control", required: true%>
+              </div>
             </div>
-          </div>
-          <div class="row control-group">
-            <div class="form-group col-12 floating-label-form-group controls">
-              <%= f.label :email %>
-              <%= f.email_field :email, placeholder: "Email address", class: "form-control", required: true%>
+            <div class="row control-group">
+              <div class="form-group col-12 floating-label-form-group controls">
+                <%= f.label :email %>
+                <%= f.email_field :email, placeholder: "Email address", class: "form-control", required: true%>
+              </div>
             </div>
-          </div>
-          <div class="row control-group">
-            <div class="form-group col-12 floating-label-form-group controls">
-              <%= f.label :phone %>
-              <%= f.text_field :phone, placeholder: "Telephone number", class: "form-control" %>
+            <div class="row control-group">
+              <div class="form-group col-12 floating-label-form-group controls">
+                <%= f.label :phone %>
+                <%= f.text_field :phone, placeholder: "Telephone number", class: "form-control" %>
+              </div>
             </div>
-          </div>
-          <div class="row control-group">
-            <div class="form-group col-12 floating-label-form-group controls">
-              <%= f.label :message %>
-              <%= f.text_area :message, placeholder: "Message", rows: "8", cols: "32", class: "form-control", required: true%>
+            <div class="row control-group">
+              <div class="form-group col-12 floating-label-form-group controls">
+                <%= f.label :message %>
+                <%= f.text_area :message, placeholder: "Message", rows: "5", cols: "32", class: "form-control", required: true%>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="form-group col-12">
-              <%= f.submit "Send Message", class: "btn btn-block btn-lg btn-primary top-margin-10"%>
+            <div class="row">
+              <div class="form-group col-12">
+                <%= f.submit "Send Message", class: "btn btn-block btn-lg btn-primary top-margin-10"%>
+              </div>
             </div>
-          </div>
-        <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
   </section>

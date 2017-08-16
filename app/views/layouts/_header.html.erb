@@ -6,20 +6,20 @@
         <span class="sr-only">Toggle navigation</span>
         Menu
       </button>
-      <a class="navbar-brand page-scroll" href="/#page-top">Boston Jazz Gigs</a>
+      <a class="navbar-brand page-scroll" href=<%= controller_name == 'static_pages' ? "#page-top" : "/" %>>Boston Jazz Gigs</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <a class="page-scroll" href="/#about">About</a>
+          <a class="page-scroll" href=<%= controller_name == 'static_pages' ? "#about" : "/#about" %>>About</a>
         </li>
         <li>
-          <a class="page-scroll" href="/#testimonials">Testimonials</a>
+          <a class="page-scroll" href=<%= controller_name == 'static_pages' ? "#testimonials" : "/#testimonials" %>>Testimonials</a>
         </li>
         <li>
-          <a class="page-scroll" href="/#contact">Contact</a>
+          <a class="page-scroll" href=<%= controller_name == 'static_pages' ? "#contact" : "/#contact" %>>Contact</a>
         </li>
       </ul>
     </div>
