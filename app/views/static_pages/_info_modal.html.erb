@@ -9,10 +9,33 @@
         <h4 class="modal-title">What is Boston Jazz Gigs?</h4>
       </div>
       <div class="modal-body">
-        <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id nunc commodo, aliquet libero at, cursus nisl. Proin sit amet est sapien. Donec elit arcu, consectetur laoreet rutrum eu, luctus et urna. Nam non felis posuere, porta odio eu, fermentum urna. Maecenas eros nibh, porttitor nec orci id, ultricies condimentum ipsum. Maecenas imperdiet pellentesque tortor, sed aliquet neque suscipit vel. Nunc iaculis ullamcorper lobortis. Nunc neque velit, vehicula varius justo at, suscipit dapibus purus. Suspendisse sed egestas arcu. Nunc nec diam sed augue tincidunt tempus. Praesent scelerisque nisi diam, ac venenatis felis bibendum ac.
-
-        </p>
+        <div class="tabbable">
+          <!-- Only required for left/right tabs -->
+          <ul class="nav nav-tabs">
+            <li>
+              <a href="#tab1" data-toggle="tab" id="tab-1-link">For Event Planners</a>
+            </li>
+            <li>
+              <a href="#tab2" data-toggle="tab" id="tab-2-link">For Musicians</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tab1">
+              <p class="margin-top-1rem">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id nunc commodo, aliquet libero at, cursus nisl. Proin sit amet est sapien. Donec elit arcu, consectetur laoreet rutrum eu, luctus et urna. Nam non felis posuere, porta odio eu, fermentum
+                urna. Maecenas eros nibh, porttitor nec orci id, ultricies condimentum ipsum. Maecenas imperdiet pellentesque tortor, sed aliquet neque suscipit vel. Nunc iaculis ullamcorper lobortis. Nunc neque velit, vehicula varius justo at, suscipit dapibus
+                purus. Suspendisse sed egestas arcu. Nunc nec diam sed augue tincidunt tempus. Praesent scelerisque nisi diam, ac venenatis felis bibendum ac.
+              </p>
+            </div>
+            <div class="tab-pane" id="tab2">
+              <p class="margin-top-1rem">
+                Integer quis dapibus nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In mattis ante quam, vel convallis dolor aliquet quis. Nulla facilisis mauris venenatis, vehicula justo non, dictum magna. In
+                eget est leo. Vivamus ut urna nec ligula pharetra eleifend. Duis molestie nisi vitae odio tristique eleifend. Quisque venenatis finibus tellus. Curabitur a maximus ante, eget accumsan neque. Etiam lacus mauris, vehicula vitae scelerisque a, fermentum
+                accumsan ligula.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -21,3 +44,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id nunc commodo, al
 
   </div>
 </div>
+<% content_for :javascript do %>
+<script>
+  $(document).ready(function () {
+    $("#tab-2-link").click(function () {
+      $("#tab-1-link").removeClass("tab-active");
+      $("#tab-2-link").addClass("tab-active");
+    });
+    $("#tab-1-link").click(function () {
+      $("#tab-2-link").removeClass("tab-active");
+      $("#tab-1-link").addClass("tab-active");
+    });
+  });
+</script>
+<% end %>
