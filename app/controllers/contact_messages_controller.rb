@@ -3,7 +3,9 @@ class ContactMessagesController < ApplicationController
     @request = ContactMessage.new(contact_message_params)
     respond_to do |format|
       if @request.save
-        RequestMailer.general_inquiry(@request).deliver_now
+        if Time.now-Time.parse(params[:start_t]) > 15.seconds
+          RequestMailer.general_inquiry(@request).deliver_now
+        end
         flash[:success]='Thanks for your message! We will get back to you as soon as possible.'
         format.html { redirect_to root_path }
       else

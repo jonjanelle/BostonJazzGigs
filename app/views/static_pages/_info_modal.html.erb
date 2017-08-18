@@ -12,11 +12,11 @@
         <div class="tabbable">
           <!-- Only required for left/right tabs -->
           <ul class="nav nav-tabs">
-            <li>
-              <a href="#tab1" data-toggle="tab" id="tab-1-link">For Event Planners</a>
+            <li class="active">
+              <a href="#tab1" data-toggle="tab">For Event Planners</a>
             </li>
             <li>
-              <a href="#tab2" data-toggle="tab" id="tab-2-link">For Musicians</a>
+              <a href="#tab2" data-toggle="tab">For Musicians</a>
             </li>
           </ul>
           <div class="tab-content">
@@ -44,17 +44,3 @@
 
   </div>
 </div>
-<% content_for :javascript do %>
-<script>
-  $(document).ready(function () {
-    $("#tab-2-link").click(function () {
-      $("#tab-1-link").removeClass("tab-active");
-      $("#tab-2-link").addClass("tab-active");
-    });
-    $("#tab-1-link").click(function () {
-      $("#tab-2-link").removeClass("tab-active");
-      $("#tab-1-link").addClass("tab-active");
-    });
-  });
-</script>
-<% end %>

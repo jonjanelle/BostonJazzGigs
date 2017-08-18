@@ -14,7 +14,7 @@
 <aside class="bg-primary" id="about">
   <div class="container text-center">
     <div class="call-to-action padding-top-1rem">
-      <h2 class="text-color-white section-title-text"><a data-toggle="modal" data-target="#myModal" title="Find out more!">Our mission is to make it easy to connect top local jazz artists and event planners!</a></h2>
+      <h2 class="text-color-white section-title-text1"><a data-toggle="modal" data-target="#myModal" title="Find out more!">Our mission is to make it easy to connect top local jazz artists and event planners!</a></h2>
       <button class="btn btn-primary btn-lg margin-top-2rem bg-blue" data-toggle="modal" data-target="#myModal" title="Find out more!">Click here to learn more</button>
     </div>
   </div>
@@ -67,7 +67,7 @@
   <div class="container text-center">
     <div class="call-to-action">
       <br>
-      <h2 class="title text-center section-title-text">Don't take our word for it!</h2>
+      <h2 class="title text-center section-title-text2">Don't take our word for it!</h2>
     </div>
   </div>
 </aside>
@@ -189,6 +189,7 @@
             </div>
             <div class="row">
               <div class="form-group col-12">
+                <%= hidden_field_tag :start_t, Time.now %>
                 <%= f.submit "Send Message", class: "btn btn-block btn-lg btn-primary top-margin-10"%>
               </div>
             </div>
