@@ -131,6 +131,13 @@ aside {
 .navbar-default .nav > li.active > a:focus:hover {
    background-color: transparent;
 }
+
+  .text-ml { font-size: 1.5rem    !important; }
+  @media (max-width: 768px){
+      .text-ml { font-size: 1.25rem    !important; }
+      .section-title-text { font-size: 1.6rem !important; }
+  }
+
 @media (min-width: 768px) {
   .navbar-default{
      background-color: transparent;

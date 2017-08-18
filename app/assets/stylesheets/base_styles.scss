@@ -3,6 +3,7 @@
 .text-small   { font-size: 0.667rem  !important; }
 .text-base    { font-size: 1rem      !important; }
 .text-medium  { font-size: 1.25rem   !important; }
+
 .text-large   { font-size: 1.5rem    !important; }
 .text-xl      { font-size: 2.25rem   !important; }
 .text-xxl     { font-size: 3.375rem  !important; }
@@ -70,9 +71,9 @@ Padding and margin styles
   .padding-#{$i}rem { padding-right: #{$i}rem !important; }
 }
 
-.margin-0 { margin: 0px; }
+.margin-0 { margin: 0px !important; }
 .margin-0-auto { margin: 0 auto; }
-.padding-0 { padding: 0; }
+.padding-0 { padding: 0px !important; }
 
 /***********************
   Text sizing and weight
