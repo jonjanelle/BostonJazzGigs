@@ -587,7 +587,7 @@ footer {
 .testimonials {
   background: #f8f8f8;
   padding-top: 60px;
-  padding-bottom: 120px;
+  padding-bottom: 100px;
   .carousel-indicators {
     bottom: -60px;
     z-index: auto;
@@ -595,15 +595,14 @@ footer {
     li {
       background: #bbb;
       border: none;
-      margin: 1px;
-      width: 2em;
+      margin: 1px 2px 1px 2px;
+      width: 2.5rem;
+      height: 1.5rem;
     }
     li.active {
       background: #f19180;
       border: none;
-
-      height: 10px;
-      margin: 1px;
+      height: 1rem;
     }
   }
   .title {
