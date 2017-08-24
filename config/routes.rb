@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'static_pages#home'
+  devise_for :users
+  root to: 'static_pages#home'
   post 'contact_messages', to: 'contact_messages#create'
 
   get 'band_requests', to: 'band_requests#new'

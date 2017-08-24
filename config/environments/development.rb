@@ -35,11 +35,11 @@ Rails.application.configure do
     port:                 587,
     domain:               'bostonjazzgigs.com',
     user_name:            'bostonjazzgigs@gmail.com',
-    password:             'x1tqh385',
+    password:             '',
     authentication:       'plain',
     enable_starttls_auto: true  }
 
-
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.
