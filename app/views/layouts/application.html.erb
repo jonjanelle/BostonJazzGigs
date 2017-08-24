@@ -16,6 +16,7 @@
 
   <body id="page-top">
     <%= render 'layouts/header' %>
+    
     <!-- Flash message output box -->
     <% flash.each do |message_type, message| %>
       <div class="container alert alert-<%= message_type %> alert-dismissible fade-in header-margin-top flash-box" role=alert>
