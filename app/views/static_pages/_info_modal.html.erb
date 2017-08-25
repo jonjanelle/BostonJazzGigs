@@ -1,7 +1,6 @@
-<!-- Modal -->
+
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
-
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header modal-header-primary">
@@ -22,39 +21,43 @@
           <div class="tab-content">
             <div class="tab-pane active" id="tab1">
               <p class="margin-top-1rem">
+                <div class="text-medium text-center">
+                  <strong>How It Works</strong>
+                </div>
+                <hr class="margin-top-10px margin-bottom-10px">
                 <div>
-                  <div class="text-medium text-center">
+                  Give us a general idea about your event plans - date, times, location, etc...
+                  by just <%= link_to "filling out our handy form", band_requests_new_path, class: "modal-link" %> - that’s it!  We will contact you directly,
+                  by phone or email, to arrange for a personal interview to discuss your needs. Your event will receive customized and individual attention. Think of us
+                  as a musical concierge – your personal music consultant - committed to bringing the magic of live jazz music to your special event.
+                </div>
+                <div>
+                  <div class="text-medium text-center margin-top-3rem">
                     <strong>Boston Jazz Gigs can help you find just the right combination of professional musicians to elevate your event to that next level!</strong>
                   </div>
-                  <hr class="margin-top-10px margin-bottom-20px">
+                  <hr class="margin-top-10px margin-bottom-10px">
                   Our musicians are all fully vetted and insured, and can play music to fit virtually any mood. Whether you need live music for a wedding, private party,
                   or a concert, Boston Jazz Gigs will custom craft ensembles of any size to meet your individual needs.  Every event receives individual attention, whether
                   you need a single artist, a small combo, or a full-scale jazz band.
                 </div>
-                <div class="text-medium text-center margin-top-2rem">
-                  <strong>How It Works</strong>
-                </div>
-                <hr class="margin-top-10px margin-bottom-20px">
-                <div>
-                  Just <%= link_to "fill out our handy form!", band_requests_new_path %>  Give us a general idea about your event plans - date, times, location, etc... That’s it!  We will contact you directly,
-                  by phone or email, to arrange for a personal interview to discuss your needs. Your event will receive customized and individual attention. Think of us
-                  as a musical concierge – your personal music consultant - committed to bringing the magic of live jazz music to your special event.
-                </div>
-              </p>
               </p>
             </div>
             <div class="tab-pane" id="tab2">
               <p class="margin-top-1rem">
-                Integer quis dapibus nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In mattis ante quam, vel convallis dolor aliquet quis. Nulla facilisis mauris venenatis, vehicula justo non, dictum magna. In
-                eget est leo. Vivamus ut urna nec ligula pharetra eleifend. Duis molestie nisi vitae odio tristique eleifend. Quisque venenatis finibus tellus. Curabitur a maximus ante, eget accumsan neque. Etiam lacus mauris, vehicula vitae scelerisque a, fermentum
-                accumsan ligula.
+                <div class="text-medium text-center">
+                  <strong>Looking for new opportunities?</strong>
+                </div>
+                <hr class="margin-top-10px margin-bottom-10px">
+                Are you an experienced jazz musician looking for a simple way to expand your network?
+                Just <%= link_to "tell us about your experience and preferences", musician_requests_new_path, class: "modal-link" %> and we'll
+                do our best to help to connect you with great musicians and gigs!
               </p>
             </div>
           </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" id="modal-button" data-dismiss="modal" onclick="closeModal">Close</button>
       </div>
     </div>
 
