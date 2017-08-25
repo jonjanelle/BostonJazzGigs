@@ -19,3 +19,6 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+function closeModal() {
+  $(".modal").removeClass('fade').modal('hide');
+}
