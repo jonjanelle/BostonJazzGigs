@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <h2 class="section-heading">
+        Have questions about Boston Jazz Gigs? Get in touch!</h2>
+      <hr class="primary">
+      <p>Send us a message with any questions, concerns, or comments and we'll get back to you as soon as possible!</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <%= form_for @request, html: {id: "contactForm", name: "sentMessage"} do |f| %>
+        <div class="row control-group">
+          <div class="form-group col-12 floating-label-form-group controls">
+            <%= f.label :name %>
+            <%= f.text_field :name, placeholder: "Name", class: "form-control", required: true%>
+          </div>
+        </div>
+        <div class="row control-group">
+          <div class="form-group col-12 floating-label-form-group controls">
+            <%= f.label :email %>
+            <%= f.email_field :email, placeholder: "Email address", class: "form-control", required: true%>
+          </div>
+        </div>
+        <div class="row control-group">
+          <div class="form-group col-12 floating-label-form-group controls">
+            <%= f.label :phone %>
+            <%= f.text_field :phone, placeholder: "Telephone number", class: "form-control" %>
+          </div>
+        </div>
+        <div class="row control-group">
+          <div class="form-group col-12 floating-label-form-group controls">
+            <%= f.label :message %>
+            <%= f.text_area :message, placeholder: "Message", rows: "5", cols: "32", class: "form-control", required: true%>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-12">
+            <%= hidden_field_tag :start_t, Time.now %>
+            <%= f.submit "Send Message", class: "btn btn-block btn-lg btn-primary top-margin-10"%>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
