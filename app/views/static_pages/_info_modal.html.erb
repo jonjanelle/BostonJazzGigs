@@ -27,7 +27,7 @@
                 <hr class="margin-top-10px margin-bottom-10px">
                 <div>
                   Give us a general idea about your event plans - date, times, location, etc...
-                  by just <%= link_to "filling out our handy form", band_requests_new_path, class: "modal-link" %> - that’s it!  We will contact you directly,
+                  by just <%= link_to "filling out our handy form", band_requests_new_path, class: "modal-link", data: {dismiss: "modal"} %> - that’s it!  We will contact you directly,
                   by phone or email, to arrange for a personal interview to discuss your needs. Your event will receive customized and individual attention. Think of us
                   as a musical concierge – your personal music consultant - committed to bringing the magic of live jazz music to your special event.
                 </div>
@@ -49,7 +49,7 @@
                 </div>
                 <hr class="margin-top-10px margin-bottom-10px">
                 Are you an experienced jazz musician looking for a simple way to expand your network?
-                Just <%= link_to "tell us about your experience and preferences", musician_requests_new_path, class: "modal-link" %> and we'll
+                Just <%= link_to "tell us about your experience and preferences", musician_requests_new_path, class: "modal-link", data: {dismiss: "modal"} %> and we'll
                 do our best to help to connect you with great musicians and gigs!
               </p>
             </div>
@@ -68,7 +68,7 @@
     $(document).ready(function(){
       console.log("here");
       $(".modal-link").click(function(){
-        console.log("modal click");
+        window.location.href = $(this).attr('href');
       });
     });
   </script>
