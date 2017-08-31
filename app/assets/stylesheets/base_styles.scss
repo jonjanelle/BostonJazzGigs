@@ -70,13 +70,16 @@ Padding and margin styles
   .padding-top-#{$i}rem { padding-top: #{$i}rem !important; }
   .padding-left-#{$i}rem { padding-left: #{$i}rem !important; }
   .padding-right-#{$i}rem { padding-right: #{$i}rem !important; }
-  .padding-#{$i}rem { padding-right: #{$i}rem !important; }
+  .padding-#{$i}rem { padding: #{$i}rem !important; }
 }
 
 .margin-0 { margin: 0px !important; }
 .margin-0-auto { margin: 0 auto; }
 .padding-0 { padding: 0px !important; }
 
+.light-rounded {
+  border-radius: 5px;
+}
 /***********************
   Text sizing and weight
 ***********************/
