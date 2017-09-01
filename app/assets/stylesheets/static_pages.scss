@@ -4,15 +4,30 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@font-face {
+    font-family: 'champagne';
+    src: font-url("champagne_limousines.ttf");
+}
+
+@font-face {
+    font-family: 'lemondrop';
+    src: font-url("lemondrop.ttf");
+}
+
+@font-face {
+  font-family:"hastings";
+  src: font-url("Hastings.ttf");
+
+}
 
 html,
 body {
   height: 100%;
   width: 100%;
+  font-family: 'Open Sans', sans-serif;
 }
-body {
-  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
-}
+
+
 hr {
   border-color: #F05F40;
   border-width: 3px;
@@ -34,9 +49,7 @@ a:focus {
   font-weight: 500;
   text-decoration: none;
 }
-h1,h2,h3,h4,h5,h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-}
+
 
 h2 {
   a{
@@ -54,6 +67,15 @@ p {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 20px;
+}
+
+.page-heading {
+  font-family: 'lemondrop', 'Open Sans';
+}
+.section-header {
+    font-family: 'hastings', 'Open Sans';
+    letter-spacing: 3px;
+    font-size: 2.6rem;
 }
 .bg-primary {
   background-color: #F05F40;
@@ -266,9 +288,7 @@ header .header-content .header-content-inner p {
     margin-right: auto;
   }
 }
-.section-heading {
-  margin-top: 0;
-}
+
 .service-box {
   max-width: 400px;
   margin: 50px auto 0;
@@ -310,7 +330,6 @@ header .header-content .header-content-inner p {
 }
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   padding: 0 15px;
 }
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
@@ -444,7 +463,6 @@ fieldset[disabled] .btn-primary.active {
   background-color: white;
 }
 .btn {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   border: none;
   border-radius: 300px;
   font-weight: 700;
@@ -590,10 +608,6 @@ footer {
     padding: 10px 0 20px 0;
 }
 
-.page-header {
-  border-bottom: 1px solid #ccc;
-}
-
 .font-lg {
   font-size: 1.5em;
 }
@@ -716,5 +730,5 @@ footer {
 }
 
 .testimonials-carousel {
-  
+
 }

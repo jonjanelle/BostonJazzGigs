@@ -2,19 +2,19 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+      <button type="button" class="navbar-toggle collapsed page-heading" data-toggle="collapse" data-target="#navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
         Menu
       </button>
       <a class="navbar-brand page-scroll" href=<%= controller_name == 'static_pages' ? "#page-top" : "/" %>>
-        <%= image_tag image_path('logo-header-transparent.png'), class: "header-logo" %>
-        <span class="mobile-hidden">Boston Jazz Gigs</span>
+        <%= image_tag image_path('bjg_logo_transparent.png'), class: "header-logo" %>
+        <span class="mobile-hidden margin-left-10px page-heading">Boston Jazz Gigs</span>
       </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right page-heading">
         <li>
           <a class="page-scroll" href=<%= controller_name == 'static_pages' ? "#about" : "/#about" %>>About</a>
         </li>
