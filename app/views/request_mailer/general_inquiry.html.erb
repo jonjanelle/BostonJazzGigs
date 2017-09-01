@@ -5,7 +5,7 @@
   <li><strong>From:</strong> <%= @request.name %></li>
   <li><strong>Email:</strong> <%= @request.email %></li>
   <li><strong>Phone:</strong> <%= @request.phone %></li>
-  <li><strong>Time Sent:</strong><%= Time.now.strftime("%b%e, %Y  %I:%M:%S %p") %>
+  <li><strong>Time Sent:</strong> <%= Time.now.strftime("%b%e, %Y  %I:%M:%S %p") %>
   <li><strong>Message:</strong> <%= @request.message %></li>
 </ul>
 <br>
