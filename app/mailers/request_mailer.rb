@@ -2,12 +2,12 @@ class RequestMailer < ApplicationMailer
 
   def general_inquiry(request)
     @request = request
-    mail(to: "bostonjazzgigs@gmail.com", reply_to: request.email, subject: "Boston Jazz Gigs Inquiry")
+    mail(to: "bostonjazzgigs@gmail.com", reply_to: request.email, from: "BostonJazzGigs <bostonjazzgigs@gmail.com>", subject: "Boston Jazz Gigs Inquiry")
   end
 
   def general_inquiry_confirmation(request)
     @request = request
-    mail(to: "bostonjazzgigs@gmail.com", reply_to: request.email, subject: "Thanks from Boston Jazz Gigs!")
+    mail(to:request.email, reply_to: "bostonjazzgigs@gmail.com", from: "BostonJazzGigs <bostonjazzgigs@gmail.com>", subject: "Thanks from Boston Jazz Gigs!")
   end
 
   def band_request(request)
