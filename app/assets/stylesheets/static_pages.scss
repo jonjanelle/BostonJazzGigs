@@ -72,11 +72,18 @@ p {
 .page-heading {
   font-family: 'lemondrop', 'Open Sans';
 }
+
 .section-header {
     font-family: 'hastings', 'Open Sans';
     letter-spacing: 3px;
     font-size: 2.6rem;
 }
+@media (max-width: 768px){
+  .section-header {
+    font-size: 2.2rem !important;
+  }
+}
+
 .bg-primary {
   background-color: #F05F40;
   opacity: .9;
@@ -97,15 +104,19 @@ p {
 .text-faded {
   color: rgba(255, 255, 255, 0.7);
 }
+
 section {
   padding: 50px 0px 60px 0px;
 }
+
 aside {
   padding: 50px 0;
 }
+
 .no-padding {
   padding: 0;
 }
+
 .navbar-default, .navbar-plain {
   background-color: rgba(255,255,255,.9);
   border-color: rgba(34, 34, 34, 0.05);
