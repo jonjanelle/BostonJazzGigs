@@ -6,7 +6,7 @@
         <span class="sr-only">Toggle navigation</span>
         Menu
       </button>
-      <a class="navbar-brand page-scroll" href=<%= controller_name == 'static_pages' ? "#page-top" : "/" %>>
+      <a class="navbar-brand page-scroll" href=<%= controller_name == 'static_pages' ? "#page-top" : "/home" %>>
         <%= image_tag image_path('bjg_logo_transparent.png'), class: "header-logo" %>
         <span class="mobile-hidden margin-left-10px page-heading">Boston Jazz Gigs</span>
       </a>
@@ -16,15 +16,22 @@
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right page-heading">
         <li>
-          <a class="page-scroll" href=<%= controller_name == 'static_pages' ? "#about" : "/#about" %>>About</a>
+          <a class="page-scroll" href=<%= controller_name == 'static_pages' ? "#about" : "/home#about" %>>About</a>
         </li>
         <li>
-          <a class="page-scroll" href=<%= controller_name == 'static_pages' ? "#demo-songs" : "/#demo-songs" %>>Demos</a>
+          <a class="page-scroll" href=<%= controller_name == 'static_pages' ? "#demo-songs" : "/home#demo-songs" %>>Demos</a>
         </li>
-
         <li>
-          <a class="page-scroll" href=<%= controller_name == 'static_pages' ? "#contact" : "/#contact" %>>Contact</a>
+          <a class="page-scroll" href=<%= controller_name == 'static_pages' ? "#contact" : "/home#contact" %>>Contact</a>
         </li>
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to "Edit Content", admin_edit_content_path %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+          </li>
+        <% end %>
       </ul>
     </div>
     <!-- /.navbar-collapse -->

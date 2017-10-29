@@ -4,22 +4,25 @@
     <div class="call-to-action padding-top-1rem">
       <h2 class="text-color-white section-title-text1 section-header">
         <a data-toggle="modal" data-target="#myModal" title="Find out more!" class="section-header">
-          Our mission is to connect you with top local jazz musicians!
+          <%= @home_profile.mission_title.present? ? @home_profile.mission_title : "Our mission is to connect you with top local jazz musicians!" %>
         </a>
       </h2>
       <hr class="light">
       <div class="text-center margin-top-1rem">
         <div class="text-medium margin-bottom-3rem">
-          <em>Live jazz music can add joy, energy, and sophistication to any social event in almost every situation.</em>
+          <em><%= @home_profile.mission_subtitle.present? ? @home_profile.mission_subtitle : "Live jazz music can add joy, energy, and sophistication to any social event in almost every situation." %></em>
         </div>
         <div class="text-medium">
-          The right live jazz music can add that special touch of class and turn an ordinary event into a crowning achievement.
-
-          But the task of finding great live performing musicians at a reasonable cost can be a harrowing one - especially if you don’t know who to call!
-          There are plenty of musicians available, but only the best will do.
+          <% if @home_profile.mission_description.present? %>
+            <%= @home_profile.mission_description %>
+          <% else %>
+            The right live jazz music can add that special touch of class and turn an ordinary event into a crowning achievement.
+            But the task of finding great live performing musicians at a reasonable cost can be a harrowing one - especially if you don’t know who to call!
+            There are plenty of musicians available, but only the best will do.
+          <% end %>
         </div>
       </div>
-      <button class="btn btn-primary btn-lg margin-top-2rem bg-blue" data-toggle="modal" data-target="#myModal" title="Find out more!">Click here to learn more</button>
+      <button class="btn btn-primary btn-lg margin-top-2rem bg-blue" data-toggle="modal" data-target="#myModal" title="Find out more!">learn more</button>
     </div>
   </div>
 </aside>
@@ -28,14 +31,14 @@
   <div class="container">
     <div class="row text-center">
       <div class="col-lg-12 text-center sr-contact">
-        <h2 class="margin-top-0px section-title-text-1 section-header">Are you a musician or event planner looking for a band?</h2>
+        <h2 class="margin-top-0px section-title-text-1 section-header"><%= @home_profile.booking_title.present? ? @home_profile.booking_title : "Are you a musician or event planner looking for a band?" %></h2>
         <hr class="primary">
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="book-band">
         <div class="col col-md-6 col-sm-12 text-center sr-button">
         <a href=<%= band_requests_new_url %>>
-          <h3>Help me find an awesome jazz band!</h3>
+          <h3><%= @home_profile.find_band_title.present? ? @home_profile.find_band_title : "Help me find an awesome jazz band!" %></h3>
           <div class="portfolio-box selection-box musician-select-bg">
             <div class="portfolio-box-caption">
               <div class="portfolio-box-caption-content">
@@ -49,7 +52,7 @@
       </div>
       <div class="col col-md-6 col-sm-12 text-center sr-button">
         <a href=<%= musician_requests_new_url %>>
-          <h3>I'm a jazz musician looking for gigs!</h3>
+          <h3><%= @home_profile.musician_looking_title.present? ? @home_profile.musician_looking_title : "I'm a jazz musician looking for gigs!" %></h3>
           <div class="portfolio-box selection-box band-select-bg">
             <div class="portfolio-box-caption">
               <div class="portfolio-box-caption-content">
@@ -65,10 +68,14 @@
     <!-- end row -->
     <div class="row">
       <div class="col-md-12 text-center text-medium margin-top-4rem margin-bottom-2rem">
-        Boston Jazz Gigs uses only the finest veteran jazz musicians, whose talents and experience have graced the music scene
-        in greater Boston for many years. All have played, and still play, in some the top jazz bands and orchestras in the area.
-        It is their mission to bring to modern audiences the inspired joy, rare quality, and prolific output of the golden era of
-        jazz and popular music.
+        <% if @home_profile.booking_description.present? %>
+          <%= @home_profile.booking_description %>
+        <% else %>
+          Boston Jazz Gigs uses only the finest veteran jazz musicians, whose talents and experience have graced the music scene
+          in greater Boston for many years. All have played, and still play, in some the top jazz bands and orchestras in the area.
+          It is their mission to bring to modern audiences the inspired joy, rare quality, and prolific output of the golden era of
+          jazz and popular music.
+        <% end %>
       </div>
     </div>
   </div>

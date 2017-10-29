@@ -4,8 +4,9 @@
       <div class="shade-box-m">
         <h1 id="home-heading" class="page-heading">Boston Jazz Gigs</h1>
         <hr>
-        <h2 class="text-ml margin-bottom-2rem">Find and book greater Boston's best Jazz musicians for your next event!</h2>
-        <a href="#about" class="btn btn-primary btn-xl page-scroll">Let's get started!</a>
+        <h2 class="text-ml margin-bottom-2rem"><%= @home_profile.subtitle.present? ? @home_profile.subtitle : "Find and book greater Boston's best Jazz musicians for your next event!" %></h2>
+        <a href="#about" class="btn btn-info btn-xl page-scroll">What we Do</a>
+        <a href="#book-band" class="btn btn-primary btn-xl page-scroll">Request a Band</a>
       </div>
     </div>
   </div>

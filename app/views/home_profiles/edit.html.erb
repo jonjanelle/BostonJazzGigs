@@ -1,0 +1,87 @@
+<div class="container margin-top-70px">
+  <div class="white-block light-rounded">
+    <div class="text-xl text-center">
+      Edit Home Page Content
+    </div>
+    <hr>
+    <%= form_for(@home_profile, method: :patch) do |f| %>
+      <div class="form-group">
+        <%= f.label :subtitle, "Page Subtitle" %>
+        <%= f.text_field :subtitle, placeholder: "This text appears directly below the page header", class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :mission_title, "Mission Title" %>
+        <%= f.text_field :mission_title, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :mission_subtitle, "Mission Subtitle" %>
+        <%= f.text_field :mission_subtitle, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :mission_description, "Mission Description" %>
+        <%= f.text_area :mission_description, class: "form-control", rows: "5", cols: "32" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :for_planners_title1, "For Event Planners - First Paragraph Title" %>
+        <%= f.text_field :for_planners_title1, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :for_planners_description1, "For Event Planners - First Paragraph Text" %>
+        <%= f.text_area :for_planners_description1, class: "form-control", rows: "5", cols: "32" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :for_planners_title2, "For Event Planners - Second Paragraph Title" %>
+        <%= f.text_field :for_planners_title2, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :for_planners_description2, "For Event Planners - Second Paragraph Text" %>
+        <%= f.text_area :for_planners_description2, class: "form-control", rows: "5", cols: "32" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :for_musicians_title1, "For Musicians - First Paragraph Title" %>
+        <%= f.text_field :for_musicians_title1, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :for_musicians_description1, "For Musicians - First Paragraph Text" %>
+        <%= f.text_area :for_musicians_description1, class: "form-control", rows: "5", cols: "32" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :booking_title, "Request Section Title" %>
+        <%= f.text_field :booking_title, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :find_band_title, "Find a Band Box Title" %>
+        <%= f.text_field :find_band_title, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :musician_looking_title, "Musician Looking for Band Box Title" %>
+        <%= f.text_field :musician_looking_title, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :booking_description, "Request Section Text" %>
+        <%= f.text_area :booking_description, class: "form-control", rows: "5", cols: "32" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :demos_title, "Demos Section Title" %>
+        <%= f.text_field :demos_title, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :demos_subtitle, "Demos Section Subtitle" %>
+        <%= f.text_field :demos_subtitle, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :demos_description, "Demos Description Text" %>
+        <%= f.text_area :demos_description, class: "form-control", rows: "5", cols: "32" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :contact_title, "Contact Form Title" %>
+        <%= f.text_field :contact_title, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :contact_description, "Contact Form Text" %>
+        <%= f.text_area :contact_description, class: "form-control", rows: "5", cols: "32" %>
+      </div>
+      <%= f.submit "Submit Changes", data: {disable_with: "Processing..."}, class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
