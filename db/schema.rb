@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170820172215) do
+ActiveRecord::Schema.define(version: 20171029163841) do
 
   create_table "band_requests", force: :cascade do |t|
     t.string "first", limit: 50, null: false
@@ -39,6 +39,29 @@ ActiveRecord::Schema.define(version: 20170820172215) do
     t.text "message", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "home_profiles", force: :cascade do |t|
+    t.string "subtitle"
+    t.string "mission_title"
+    t.string "mission_subtitle"
+    t.string "mission_description"
+    t.string "for_planners_title1"
+    t.string "for_planners_description1"
+    t.string "for_planners_title2"
+    t.string "for_planners_description2"
+    t.string "for_musicians_title1"
+    t.string "for_musicians_description1"
+    t.string "booking_title"
+    t.string "booking_description"
+    t.string "find_band_title"
+    t.string "musician_looking_title"
+    t.string "demos_title"
+    t.string "demos_subtitle"
+    t.string "demos_description"
+    t.string "contact_title"
+    t.string "contact_description"
+    t.string "profile_name"
   end
 
   create_table "musician_requests", force: :cascade do |t|
@@ -74,6 +97,7 @@ ActiveRecord::Schema.define(version: 20170820172215) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "role_type", default: "user"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

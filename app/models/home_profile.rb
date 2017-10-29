@@ -1,0 +1,3 @@
+class HomeProfile < ApplicationRecord
+  
+end

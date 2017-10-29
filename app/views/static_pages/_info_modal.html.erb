@@ -22,35 +22,55 @@
             <div class="tab-pane active" id="tab1">
               <p class="margin-top-1rem">
                 <div class="text-medium text-center">
-                  <strong>How It Works</strong>
+                  <strong><%= @home_profile.for_planners_title1.present? ? @home_profile.for_planners_title1 : "How It Works" %></strong>
                 </div>
                 <hr class="margin-top-10px margin-bottom-10px">
                 <div>
-                  Give us a general idea about your event plans - date, times, location, etc...
-                  by just <%= link_to "filling out our handy form", band_requests_new_path, class: "modal-link", data: {dismiss: "modal"} %> - that’s it!  We will contact you directly,
-                  by phone or email, to arrange for a personal interview to discuss your needs. Your event will receive customized and individual attention. Think of us
-                  as a musical concierge – your personal music consultant - committed to bringing the magic of live jazz music to your special event.
+                  <% if @home_profile.for_planners_description1.present? %>
+                    <%= @home_profile.for_planners_description1 %>
+                  <% else %>
+                    Give us a general idea about your event plans - date, times, location, etc...
+                    by just <%= link_to "filling out our handy form", band_requests_new_path, class: "modal-link", data: {dismiss: "modal"} %> - that’s it!  We will contact you directly,
+                    by phone or email, to arrange for a personal interview to discuss your needs. Your event will receive customized and individual attention. Think of us
+                    as a musical concierge – your personal music consultant - committed to bringing the magic of live jazz music to your special event." %>
+                  <% end %>
                 </div>
                 <div>
-                  <div class="text-medium text-center margin-top-3rem">
-                    <strong>Boston Jazz Gigs can help you find just the right combination of professional musicians to elevate your event to that next level!</strong>
+                  <div class="text-medium text-center margin-top-2rem">
+                    <strong><%= @home_profile.for_planners_title2 || "Boston Jazz Gigs can help you find just the right combination of professional musicians to elevate your event to that next level!" %></strong>
                   </div>
                   <hr class="margin-top-10px margin-bottom-10px">
-                  Our musicians are all fully vetted and insured, and can play music to fit virtually any mood. Whether you need live music for a wedding, private party,
-                  or a concert, Boston Jazz Gigs will custom craft ensembles of any size to meet your individual needs.  Every event receives individual attention, whether
-                  you need a single artist, a small combo, or a full-scale jazz band.
+                  <% if @home_profile.for_planners_description2.present? %>
+                    <%= @home_profile.for_planners_description2 %>
+                  <% else %>
+                    Our musicians are all fully vetted and insured, and can play music to fit virtually any mood. Whether you need live music for a wedding, private party,
+                    or a concert, Boston Jazz Gigs will custom craft ensembles of any size to meet your individual needs.  Every event receives individual attention, whether
+                    you need a single artist, a small combo, or a full-scale jazz band.
+                  <% end %>
+                  <% if @home_profile.for_planners_description1.present? %>
+                    <div class="text-center margin-top-1rem">
+                      <%= link_to "view request form", band_requests_new_path, class: "modal-link btn btn-primary bg-blue", data: {dismiss: "modal"} %>
+                    </div>
+                  <% end %>
                 </div>
               </p>
             </div>
             <div class="tab-pane" id="tab2">
               <p class="margin-top-1rem">
                 <div class="text-medium text-center">
-                  <strong>Looking for new opportunities?</strong>
+                  <strong><%= @home_profile.for_musicians_title1.present? ? @home_profile.for_musicians_title1 : "Looking for new opportunities?" %></strong>
                 </div>
                 <hr class="margin-top-10px margin-bottom-10px">
-                Are you an experienced jazz musician looking for a simple way to expand your network?
-                Just <%= link_to "tell us about your experience and preferences", musician_requests_new_path, class: "modal-link", data: {dismiss: "modal"} %> and we'll
-                do our best to help to connect you with great musicians and gigs!
+                <% if @home_profile.for_musicians_description1.present? %>
+                  <%= @home_profile.for_musicians_description1 %>
+                  <div class="text-center margin-top-2rem">
+                    <%= link_to "Join Our Network", musician_requests_new_path, class: "modal-link btn btn-primary bg-blue", data: {dismiss: "modal"} %>
+                  </div>
+                <% else %>
+                  Are you an experienced jazz musician looking for a simple way to expand your network?
+                  Just <%= link_to "tell us about your experience and preferences", musician_requests_new_path, class: "modal-link", data: {dismiss: "modal"} %> and we'll
+                  do our best to help to connect you with great musicians and gigs!
+                <% end %>
               </p>
             </div>
           </div>
@@ -60,7 +80,6 @@
         <button type="button" class="btn btn-default" id="modal-button" data-dismiss="modal" onclick="closeModal">Close</button>
       </div>
     </div>
-
   </div>
 </div>
 

@@ -1,9 +1,9 @@
 <section class="bg-teal padding-top-2rem padding-bottom-4rem">
   <div class="container">
-    <h2 class="text-center text-color-white section-header">Hearing is Believing</h2>
+    <h2 class="text-center text-color-white section-header"><%= @home_profile.demos_title.present? ? @home_profile.demos_title : "Hearing is Believing" %></h2>
     <hr>
     <div class="text-medium text-center margin-bottom-1rem">
-      <em>The songs below were all performed by the talented musicians in our network!</em>
+      <em><%= @home_profile.demos_subtitle.present? ?  @home_profile.demos_subtitle : "The songs below were all performed by the talented musicians in our network!" %></em>
     </div>
     <div class="row">
       <div class="col-md-6 margin-top-1rem">
@@ -45,6 +45,13 @@
         </div>
       </div>
     </div>
+    <% if @home_profile.demos_description.present? %>
+      <div class="row">
+        <div class="col-md-12 text-center text-medium margin-top-3rem margin-bottom-2rem">
+          <%= @home_profile.demos_description %>
+        </div>
+      </div>
+    <% end %>
   </div>
 
 </section>
