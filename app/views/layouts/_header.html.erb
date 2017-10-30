@@ -25,9 +25,11 @@
           <a class="page-scroll" href=<%= controller_name == 'static_pages' ? "#contact" : "/home#contact" %>>Contact</a>
         </li>
         <% if user_signed_in? %>
-          <li>
-            <%= link_to "Edit Content", admin_edit_content_path %>
-          </li>
+          <% if current_user.role_type == "admin" %>
+            <li>
+              <%= link_to "Edit Content", admin_edit_content_path %>
+            </li>
+          <% end %>
           <li class="nav-item">
             <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
           </li>
