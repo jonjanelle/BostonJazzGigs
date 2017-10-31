@@ -36,7 +36,6 @@ $(document).ready(function () {
   });
 });
 
-
 function closeModal() {
   $(".modal").removeClass('fade').modal('hide');
 }
