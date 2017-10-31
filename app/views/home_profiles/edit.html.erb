@@ -81,7 +81,14 @@
         <%= f.label :contact_description, "Contact Form Text" %>
         <%= f.text_area :contact_description, class: "form-control", rows: "5", cols: "32" %>
       </div>
-      <%= f.submit "Submit Changes", data: {disable_with: "Processing..."}, class: "btn btn-primary" %>
+      <%= f.submit "Submit Changes", data: {disable_with: "Processing..."}, class: "btn btn-primary btn-block" %>
     <% end %>
   </div>
 </div>
+
+<% content_for :javascript do %>
+  <script>
+    $(document).ready(function(){
+    });
+  </script>
+<% end %>
