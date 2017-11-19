@@ -16,11 +16,12 @@
 //= require jquery.timepicker.js
 //= require scrollreveal/scrollreveal.min
 //= require rails-ujs
-//= require turbolinks
 //= require bootstrap-sprockets
+
 //= require_tree .
 
 $(document).ready(function () {
+  $(".form-control").tooltip();
   $(document).on('click', function(event){
     var $clickedOn = $(event.target),
         $collapsableItems = $('.collapse'),

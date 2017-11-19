@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171029163841) do
+ActiveRecord::Schema.define(version: 20171119203629) do
 
   create_table "band_requests", force: :cascade do |t|
     t.string "first", limit: 50, null: false
@@ -62,6 +62,36 @@ ActiveRecord::Schema.define(version: 20171029163841) do
     t.string "contact_title"
     t.string "contact_description"
     t.string "profile_name"
+    t.string "audio_1"
+    t.string "audio_2"
+    t.string "audio_3"
+    t.string "audio_4"
+    t.string "audio_title_1"
+    t.string "audio_title_2"
+    t.string "audio_title_3"
+    t.string "audio_title_4"
+    t.string "audio_desc_1"
+    t.string "audio_desc_2"
+    t.string "audio_desc_3"
+    t.string "audio_desc_4"
+    t.string "audio_5"
+    t.string "audio_6"
+    t.string "audio_7"
+    t.string "audio_8"
+    t.string "audio_9"
+    t.string "audio_10"
+    t.string "audio_title_5"
+    t.string "audio_title_6"
+    t.string "audio_title_7"
+    t.string "audio_title_8"
+    t.string "audio_title_9"
+    t.string "audio_title_10"
+    t.string "audio_desc_5"
+    t.string "audio_desc_6"
+    t.string "audio_desc_7"
+    t.string "audio_desc_8"
+    t.string "audio_desc_9"
+    t.string "audio_desc_10"
   end
 
   create_table "musician_requests", force: :cascade do |t|

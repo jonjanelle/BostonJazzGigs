@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'home', to: 'static_pages#home'
   get 'admin/edit_content', to: 'home_profiles#edit'
   patch 'home_profiles/:id', to: 'home_profiles#update', as: "home_profile"
+  patch 'home_profile/:id/remove_song', to: 'home_profiles#remove_song', as: "home_profile_remove_song"
 
   post 'contact_messages', to: 'contact_messages#create'
 
