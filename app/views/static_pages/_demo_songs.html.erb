@@ -5,46 +5,34 @@
     <div class="text-medium text-center margin-bottom-1rem">
       <em><%= @home_profile.demos_subtitle.present? ?  @home_profile.demos_subtitle : "The songs below were all performed by the talented musicians in our network!" %></em>
     </div>
-    <div class="row">
-      <div class="col-md-6 margin-top-1rem">
-        <div class="audio-box padding-10px light-hover-shadow text-center bg-light">
-          <div class="text-medium text-color-darkest">Caravan</div>
-          <audio controls>
-            <source src=<%= audio_path 'caravan_tizol.mp3' %> type="audio/mpeg">
-            Your browser does not support the audio tag.
-          </audio>
-        </div>
+    <% (1..5).each do |n| %>
+      <% i = 2*n-1 %>
+      <div class="row">
+        <% if @home_profile.send("audio_#{i}").try(:url) %>
+          <div class="col-md-6 margin-top-1rem">
+            <div class="audio-box padding-10px light-hover-shadow text-center bg-light">
+              <div class="text-medium text-color-darkest"><%= @home_profile.send("audio_title_#{i}") %></div>
+              <audio controls>
+                <source src=<%= @home_profile.send("audio_#{i}").url %> type="audio/mpeg">
+                Your browser does not support the audio tag.
+              </audio>
+            </div>
+          </div>
+        <% end %>
+        <% if @home_profile.send("audio_#{i+1}").try(:url) %>
+          <div class="col-md-6 margin-top-1rem">
+            <div class="audio-box padding-10px light-hover-shadow text-center bg-light">
+              <div class="text-medium text-color-darkest"><%= @home_profile.send("audio_title_#{i+1}") %></div>
+              <audio controls>
+                <source src=<%= @home_profile.send("audio_#{i+1}").url %> type="audio/mpeg">
+                Your browser does not support the audio tag.
+              </audio>
+            </div>
+          </div>
+        <% end %>
       </div>
-      <div class="col-md-6 margin-top-1rem">
-        <div class="audio-box padding-10px light-hover-shadow text-center bg-light">
-          <div class="text-medium text-color-darkest">Fidgety Feel</div>
-          <audio controls>
-            <source src=<%= audio_path "fidgety_feel_larocca_shields.mp3" %> type="audio/mpeg">
-            Your browser does not support the audio tag.
-          </audio>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6 margin-top-1rem">
-        <div class="audio-box padding-10px light-hover-shadow text-center bg-light">
-          <div class="text-medium text-color-darkest">Diga Diga Do</div>
-          <audio controls>
-            <source src="<%= audio_path 'diga_diga_do_fields_mchugh.mp3' %>" type="audio/mpeg">
-            Your browser does not support the audio tag.
-          </audio>
-        </div>
-      </div>
-      <div class="col-md-6 margin-top-1rem">
-        <div class="audio-box padding-10px light-hover-shadow text-center  bg-light">
-          <div class="text-medium text-color-darkest">It Had To Be You</div>
-          <audio controls>
-            <source src=<%= audio_path('it_had_to_be_you.mp3') %> type="audio/mpeg">
-            Your browser does not support the audio tag.
-          </audio>
-        </div>
-      </div>
-    </div>
+    <% end %>
+
     <% if @home_profile.demos_description.present? %>
       <div class="row">
         <div class="col-md-12 text-center text-medium margin-top-3rem margin-bottom-2rem">
@@ -53,5 +41,4 @@
       </div>
     <% end %>
   </div>
-
 </section>
