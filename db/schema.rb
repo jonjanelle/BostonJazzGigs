@@ -61,6 +61,8 @@ ActiveRecord::Schema.define(version: 20171119203629) do
     t.string "demos_description"
     t.string "contact_title"
     t.string "contact_description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "profile_name"
     t.string "audio_1"
     t.string "audio_2"

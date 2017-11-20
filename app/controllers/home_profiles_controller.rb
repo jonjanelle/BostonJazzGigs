@@ -32,6 +32,15 @@ class HomeProfilesController < ApplicationController
   end
 
   def remove_song
+    hp = HomeProfile.find(params[:id])
+    song_num = params[:song_num]
+    hp.try(:send, "remove_audio_#{song_num}!")
+    hp.update_attribute("audio_title_#{song_num}".to_sym, nil)
+    hp.save
+    song_index = song_num.to_i - 1
+    respond_to do |format|
+      format.js { render :js => "$('.audio-wrapper-#{song_index}').hide('blind'); console.log('.audio-wrapper-#{song_index}');" }
+    end
   end
 
   private

@@ -76,19 +76,27 @@
       <% @audio_names.each_with_index do |audio, index| %>
         <div class="form-group row audio-wrapper-<%= index %>">
           <div class="col-sm-6">
-            <%= f.label audio[0], "Demo #{index+1} Title" %>
+            <% file_name = @home_profile.send(audio[1]).path.try(:split, "/").try(:last) || "None" %>
+            <%= f.label audio[0] do %>
+              Demo <%= index+1 %> Title
+              <% unless file_name == "None" %>
+                <%= link_to home_profile_remove_song_path(id: @home_profile.id, song_num: index+1), class: "text-color-reqd margin-left-1rem", remote: true, method: :patch do %>
+                  <small><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Delete</small>
+                <% end %>
+              <% end %>
+            <% end %>
             <%= f.text_field audio[0], class: "form-control" %>
           </div>
           <div class="col-sm-6">
             <%= f.label audio[1] do %>
-              Demo Song <%= index+1 %> File: <span class="text-color-blue"> <%= @home_profile.send(audio[1]).path.try(:split, "/").try(:last) || "None" %></span>
+              Demo Song <%= index+1 %> File: <span class="text-color-blue"> <%= file_name %></span>
             <% end %>
             <%= f.file_field audio[1], :accept => 'audio/mp3, audio/wav', class: "form-control", title: "mp3 or wav formats are accepted" %>
             <%= f.hidden_field audio[2] %>
           </div>
         </div>
       <% end %>
-      <div class="row">
+      <div class="row margin-bottom-10px">
         <div class="col-sm-12 text-center"><a href="#" class="btn btn-success btn-small" id="add-song-btn"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Demo Song</a></div>
       </div>
       <div class="form-group">
