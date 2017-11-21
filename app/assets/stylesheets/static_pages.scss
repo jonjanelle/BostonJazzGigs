@@ -696,7 +696,7 @@ footer {
     z-index: 1;
     position: relative;
     padding-right: 0;
-    
+
     border: none;
     border-radius: 0;
     font-size: 1.5em;
@@ -726,7 +726,8 @@ footer {
   opacity: 1; }
 
 .floating-label-form-group-with-focus label {
-  color: #EF4035; }
+  color: #EF4035;
+}
 
 
 
@@ -742,4 +743,10 @@ footer {
 
 .testimonials-carousel {
 
+}
+
+@media(max-width: 768px) {
+  .contact-form-container {
+    margin: 0px 10px;
+  }
 }
